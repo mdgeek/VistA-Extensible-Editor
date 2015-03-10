@@ -1,0 +1,105 @@
+RGEDINIT ;MSC/IND/DKM - Extensible Editor Inits;04-May-2006 08:19;DKM
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 12
+ ;;
+ ;=================================================================
+ ; Environment check
+EC D VCHK("RGUT",3)
+ Q
+VCHK(RGP,RGV) ;
+ D:$$VERSION^XPDUTL(RGP)<RGV MES("Requires at least version "_RGV_" of the "_RGP_".",1)
+ Q
+MES(X,Y) D BMES^XPDUTL("  "_X)
+ S:$G(Y) XPDQUIT=Y
+ Q
+ ; Pre-init
+PRE D PERSIST
+ Q
+ ; Post-init
+POST N RGZ,RGZ1,RGM
+ D ALL^RGEDCMP,LOCAL
+ K ^TMP("RGED",$J)
+ F RGZ=1:1 S RGZ1=$P($T(DEVICE+RGZ),";;",2,99) Q:RGZ1=""  S ^TMP("RGED",$J,RGZ)=$$MSG^RGUT(RGZ1,"|")
+ I $$ENTRY^RGUTIMP($NA(^TMP("RGED",$J))) D
+ .D MES("Unable to install BROWSER (RG) device")
+ K ^TMP("RGED",$J)
+ S RGZ1=0,RGZ=$$ENTRY^RGUTDIC(1.2,"=XTENSIBLE EDITOR"),RGM="D ENTRY^RGED(DIC,$G(DIWETXT),$G(DIWESUB))"
+ I RGZ>0 S:$$ENTRY^RGUTDIC(RGZ,"<;1///^S X=RGM")>0 RGZ1=0
+ E  S:$$ENTRY^RGUTDIC(1.2,"~;.01///EXTENSIBLE EDITOR;1///^S X=RGM")>0 RGZ1=0
+ D:RGZ1 MES("Unable to install EXTENSIBLE EDITOR entry in ALTERNATE EDITOR file.")
+ Q
+ ; Add local routine edit
+LOCAL N RGI,RGED
+ F RGI=0:0 S RGI=$O(^RGEDIT(RGI)) Q:'RGI  K ^(RGI)
+ F RGI=0:1 S RGED=$P($T(LOCALX+RGI),";;",2,999) Q:'$L(RGED)  S:'RGI ^RGEDIT=RGED S:RGI ^RGEDIT(RGI)=RGED
+ Q
+LOCALX ;;N X,Y,L K ^TMP("RGEDRTN",$J) S ^($J,0)="" F X=1:1 S Y=$T(+X),L=$L(Y) S:L ^TMP("RGEDRTN",$J,X,0)=Y I 'L X ^RGEDIT(1) Q
+ ;;D LOCAL^RGEDIT X:$D(^TMP("RGEDRTN",$J)) ^RGEDIT(2)
+ ;;N L F  S L=$L($T(+1)) X:'L ^RGEDIT(3) Q:'L  ZR +1
+ ;;N X S X=0 F  S X=$O(^TMP("RGEDRTN",$J,X)) ZI:X ^(X,0) I 'X K ^TMP("RGEDRTN",$J) Q
+ ;;
+ ; Add persistent buffers
+PERSIST N RGZ,RGZ1,RGZ2,RGZ3
+ F RGZ=0:0 S RGZ=$O(^RGEDCFG(RGZ)) Q:'RGZ  D
+ .F RGZ1=0:0 S RGZ1=$O(^RGEDCFG(RGZ,2,RGZ1)) Q:'RGZ1  D
+ ..S RGZ3=^(RGZ1,0),RGZ2=$TR($G(^(1)),"~[] ","*")
+ ..I +RGZ3=1,$P(RGZ3,U,2)=28 S $P(^(0),U,2)=38
+ ..Q:'$L(RGZ2)
+ ..I +RGZ3=1,RGZ2["*Z*",RGZ2'["*0*" F RGZ3=0:1:9 S RGZ2=RGZ2_";*"_RGZ3_"*"
+ ..S ^(1)=RGZ2
+ Q
+ ; Return $I for HFS device
+HFS() N RGZ
+ S RGZ=$P(^%ZOSF("OS"),U)
+ Q $S(RGZ["DSM":"TEMP.TMP",RGZ["MSM":51,RGZ["OpenM":"NUL",1:"@")
+DEVICE ;; Setups for browser device
+ ;;:3.2
+ ;;.NAME: P-RGBROWSER
+ ;;.SELECTABLE AT SIGN-ON: NO
+ ;;.RIGHT MARGIN: 80
+ ;;.FORM FEED: ""
+ ;;.PAGE LENGTH: 99999
+ ;;.BACK SPACE: $C(8)
+ ;;.REVERSE VIDEO ON: $C(27,91,55,109)
+ ;;.REVERSE VIDEO OFF: $C(27,91,109)
+ ;;.ERASE TO END OF LINE: $C(27,91,75)
+ ;;.ERASE TO END OF PAGE: $C(27,91,74)
+ ;;.BLINK ON: $C(27,91,53,109)
+ ;;.BLINK OFF: $C(27,91,109)
+ ;;.RESET: $C(27,99)
+ ;;.SGR ATTRIBUTES OFF: $C(27,91,109)
+ ;;.UNDERLINE ON: $C(27,91,52,109)
+ ;;.UNDERLINE OFF: $C(27,91,109)
+ ;;.HIGH INTENSITY (BOLD): $C(27,91,49,109)
+ ;;.LOW INTENSITY (UNBOLD): $C(27,91,109)
+ ;;.NORMAL INTENSITY (RESET): $C(27,91,109)
+ ;;.ERASE FROM BEG OF LINE: $C(27,91,49,75)
+ ;;.ERASE ENTIRE LINE: $C(27,91,50,75)
+ ;;.GRAPHICS ON: $C(27)_"(0"
+ ;;.GRAPHICS OFF: $C(27)_"(B"
+ ;;.TOP LEFT CORNER: "l"
+ ;;.BOTTOM LEFT CORNER: "m"
+ ;;.TOP RIGHT CORNER: "k"
+ ;;.BOTTOM RIGHT CORNER: "j"
+ ;;.MIDDLE T: "n"
+ ;;.TOP T: "w"
+ ;;.BOTTOM T: "v"
+ ;;.LEFT T: "t"
+ ;;.RIGHT T: "u"
+ ;;.VERTICAL LINE: "x"
+ ;;.HORIZONTAL LINE: "q"
+ ;;.DESCRIPTION: VT100-compatible browser
+ ;;:3.5
+ ;;.NAME: BROWSER (RG)
+ ;;.LOCATION OF TERMINAL: Text Browser Utility
+ ;;.$I: |$$HFS^RGEDINIT|
+ ;;.SIGN-ON/SYSTEM DEVICE: N
+ ;;.TYPE: HFS
+ ;;.SUBTYPE: P-RGBROWSER
+ ;;.ASK DEVICE: N
+ ;;.ASK PARAMETERS: N
+ ;;.ASK HOST FILE: N
+ ;;.ASK HFS I/O OPERATION: N
+ ;;.QUEUING: 2
+ ;;.PRE-OPEN EXECUTE: D PREOPEN^RGEDBRS
+ ;;.POST-CLOSE EXECUTE: D POSTCLS^RGEDBRS
+ ;;

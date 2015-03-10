@@ -1,0 +1,79 @@
+RGED4 ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 12
+ ;;
+ ;=================================================================
+ ; Delete entire line
+DELLIN(RGITER) ;
+ F RGITER=+$G(RGITER):-1 D  Q:RGITER'>1
+ .D DL1(RGLN,2)
+ .S RGLN="",RGCHG=1
+ .K ^XTMP(RGPID,RGBUF,RGROW)
+ .D JOIN1^RGED1
+ Q
+DL1(X,Y) K ^XTMP(RGPID,"RGED@")
+ S ^("RGED@",0)=U_U_Y_U_Y,^(1)=X,^(2)=""
+ Q
+ ; Delete to beginning of line
+DELBOL D DL1($E(RGLN,1,RGCOL-1),1)
+ S RGLN=$E(RGLN,RGCOL,999),RGCHG=1
+ D SLINE^RGEDS(RGROW),HOME^RGED2
+ Q
+ ; Delete to end of line
+DELEOL D DL1($E(RGLN,RGCOL,999),1)
+ S RGLN=$E(RGLN,1,RGCOL-1),RGCHG=1
+ D SLINE^RGEDS(RGROW)
+ Q
+ ; Undelete line
+UNDLIN(RGITER) ;
+ I '$D(^XTMP(RGPID,"RGED@")) W RGBEL Q
+ D PASTE^RGED6("@",.RGITER)
+ Q
+ ; Justify a line or block between left and right margins
+ ; RGJUST = -1: left justify, 1: right justify, 0: center
+JUSTIFY(RGJUST,RGITER) ;
+ N RGZ,RGZ1
+ S RGITER=+$G(RGITER)
+ I RGSR1 D
+ .S RGITER=RGSR1-RGROW
+ .I RGITER<0 S RGITER=-RGITER D MOVETO^RGED2(RGSR1,1)
+ .S RGITER=RGITER+1
+ .D SELECT^RGED5
+JU1 F RGZ=1:1 Q:$A(RGLN,RGZ)'=32
+ F RGZ1=$L(RGLN):-1 Q:$A(RGLN,RGZ1)'=32
+ S RGZ1=$E(RGLN,RGZ,RGZ1)
+ S RGZ=$S('RGJUST:RGST(8)-RGST(7)+1-$L(RGZ1)\2,RGJUST<0:0,1:RGST(8)-RGST(7)+1-$L(RGZ1))
+ G:(RGZ1="")!(RGZ<0) JU2
+ I (RGZ+$L(RGZ1)+RGST(7))>RGMAX W $$PRMPT^RGED2(-4,0) Q
+ S RGLN=$$REPEAT^XLFSTR(" ",RGZ+RGST(7)-1)_RGZ1,RGCHG=1
+ D SLINE^RGEDS(RGROW)
+JU2 I RGITER>1,RGROW<RGLC S RGITER=RGITER-1 D MOVETO^RGED2(RGROW+1,1) G JU1
+ Q
+ ; Establish a configuration alias for this user
+ALIAS(Y) ;
+ I 'DUZ W $$PRMPT^RGED2(-4,0) Q
+ I $G(Y)'="" S:Y'=+Y Y=+$O(^RGEDCFG("B",Y,0))
+ E  I '$O(^RGEDCFG(RGCF,8,0)) W $$PRMPT^RGED2(-70,0) Q
+ E  D
+ .S Y(1)="%S'=RGCF&$D(^RGEDCFG(RGCF,8,%S))"
+ .W $$XY^RGUT(0,RGY1),RGEOS,!
+ .S Y=$$LKP("^RGED1","UPE","Enter configuration name to use as an alias: ","","","Y","",0,RGY1+2)
+ I Y>0 D
+ .S ^RGED("A",RGCF,DUZ)=Y
+ .D PAINT^RGEDS
+ .W $$PRMPT^RGED2(53,0)
+ E  D PAINT^RGEDS
+ Q
+ ; Remove this configuration as an alias
+UNALIAS I 'DUZ W $$PRMPT^RGED2(-4,0) Q
+ I RGCF2 D
+ .K ^RGED("A",RGCF2,DUZ)
+ .W $$PRMPT^RGED2(54,0)
+ E  W $$PRMPT^RGED2(-55,0)
+ Q
+LKP(RGDIC,RGOPT,RGPRMPT,RGEDRF,RGDATA,RGSCN,RGMUL,RGED,RGY,RGSID,RGTRP,RGHLP) ;
+ N RGRTN
+ X ^%ZOSF("EON"),^%ZOSF("TRMOFF")
+ S RGRTN=$$ENTRY^RGUTLKP(RGDIC,.RGOPT,.RGPRMPT,.RGEDRF,.RGDATA,.RGSCN,.RGMUL,.RGED,.RGY,.RGSID,.RGTRP,.RGHLP)
+ X ^%ZOSF("EOFF"),^%ZOSF("TRMON")
+ D RM^RGUTOS(0)
+ Q RGRTN

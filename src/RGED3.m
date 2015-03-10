@@ -1,0 +1,85 @@
+RGED3 ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 12
+ ;;
+ ;=================================================================
+ ; Output active buffer to a device
+PRINT Q:'RGLC
+ W $$XY^RGUT(0,RGY1),RGEOS,!
+ X ^%ZOSF("EON"),^("TRMOFF")
+ D P0
+ U IO
+ X ^%ZOSF("EOFF"),^("TRMON")
+ D PAINT^RGEDS
+ Q
+P0 N IO,%IS,%ZIS,IOP
+ S %ZIS="0Q",%ZIS("A")="Print to device: ",%ZIS("B")=""
+ D ^%ZIS
+ I POP W $$PRMPT^RGED2(-16,0) Q
+ Q:IO=IO(0)
+ D UPDATE^RGED2
+ G:$D(IO("Q")) P1
+ D P2("^XTMP(RGPID,RGBUF)")
+ Q
+ ; Task print job
+P1 N RGNUM,RGGBL
+ S RGNUM=$$NUM,RGGBL="^RGTMP(""RGED"","_RGNUM_")"
+ K ^RGTMP("RGED",RGNUM)
+ F RGZ=1:1:RGLC S ^RGTMP("RGED",RGNUM,RGZ)=^XTMP(RGPID,RGBUF,RGZ)
+ S RGNUM=$$QUEUE^RGUTSK("PTSK^RGED3","EE Print",$H,"RGLC^RGGBL",ION)
+ W:RGNUM<1 $$PRMPT^RGED2(-17,0)
+ Q
+ ; Non TaskMan entry point
+P2(RGGBL) ;
+ N ZTSK
+ ; TaskMan entry point
+PTSK N RGZ
+ U IO
+ D RM^RGUTOS(0)
+ F RGZ=1:1:RGLC W $G(@RGGBL@(RGZ)),!
+ D ^%ZISC
+ K:$D(ZTSK) @RGGBL
+ Q
+ ; Generate a unique number
+NUM() L +^RGED("N")
+ N RGZ
+ S (RGZ,^("NUM"))=$G(^RGED("NUM"))+1
+ L -^RGED("N")
+ Q RGZ
+ ; Specify a macro
+MACRO(RGMACRO,RGP) ;
+ S RGMACRO=$$PRMPT^RGED2(RGP,1,"U","0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@^")
+ Q:U[RGMACRO
+ Q
+ ; Define a macro
+MDEF(RGMACRO,RGDEF) ;
+ I $G(DUZ(0))'="@" W $$PRMPT^RGED2(-67,0) Q
+ D:$G(RGMACRO)="" MACRO(.RGMACRO,45)
+ Q:U[RGMACRO
+ S:'$D(RGDEF) RGDEF=$$PRMPT^RGED2(48,999,"H","",$G(^RGED("M",RGCF,DUZ,RGMACRO)))
+ Q:$E(RGDEF)=U
+ I RGDEF="" K ^RGED("M",RGCF,DUZ,RGMACRO)
+ E  S ^RGED("M",RGCF,DUZ,RGMACRO)=RGDEF
+ Q
+ ; Execute a macro
+MEXE(RGMACRO,RGMCNT) ;
+ D:$G(RGMACRO)="" MACRO(.RGMACRO,46)
+ Q:U[RGMACRO
+ S:'$G(RGMCNT) RGMCNT=1
+ I '$D(^RGED("M",RGCF,DUZ,RGMACRO)) W $$PRMPT^RGED2(-49,0)
+ E  D
+ .N RGITER
+ .S RGITER=0
+ .D POS^RGED2
+ .F RGMCNT=RGMCNT:-1:1 X ^RGED("M",RGCF,DUZ,RGMACRO)
+ Q
+ ; Show macro definitions
+MSHOW N RGMACRO,RGCNT,RGTMP,RGABRT
+ S RGMACRO="",RGTMP=RGY2-3,$Y=RGY2,RGABRT=""
+MS1 F RGCNT=0:1 S RGMACRO=$O(^RGED("M",RGCF,DUZ,RGMACRO)) Q:RGMACRO=""  D
+ .I $Y>RGTMP D
+ ..S:RGCNT RGABRT=$$PRMPT^RGED2(59,1,"",U)
+ ..W $$XY^RGUT(RGED1,RGY1),RGEOS,*13
+ .W:RGABRT'=U RGMACRO_" = ",^RGED("M",RGCF,DUZ,RGMACRO),!
+ S RGTMP=$$PRMPT^RGED2("|RGCNT| macro(s) defined. Press RETURN to resume editing...",1,""," ")
+ D PAINT^RGEDS
+ Q
