@@ -1,4 +1,4 @@
-RGEDIT ;MSC/IND/DKM - M routine editor ;05-Mar-2015 18:47;DKM
+RGEDIT ;MSC/IND/DKM - M routine editor ;01-Apr-2015 08:59;DKM
  ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 12
  ;;
  ;=================================================================
@@ -80,7 +80,7 @@ DONE K ^UTILITY($J),^TMP("RGEDRTN",$J),^TMP("RGEDRTN2",$J),^TMP("RGEDRTN3",$J)
 ERR W $$EC^%ZOSV,!
  G DONE
 SV0 ; Save current routine
- D:$D(^TMP("RGEDRTN3",$J,"R")) RTNSAVE^RGUT(RGR,$NA(^("R")))
+ D:$D(^TMP("RGEDRTN3",$J,"R")) SAVE^RGUTRTN(RGR,$NA(^("R")))
  K ^TMP("RGEDRTN3",$J)
  S RGS=1
  Q
@@ -112,7 +112,7 @@ NEW(RGRTN) ;
  .I RGRTN=U S RGQ=1 Q
  .Q:RGRTN="@"
  .I RGRTN'?1A.7AN W "That is not a valid name.  Enter ^ to abort, @ to edit the template.",!! S RGRTN="" Q
- .I $$TEST^RGUTOS(RGRTN) W "That routine already exists.  Try another name.",!! S RGRTN="" Q
+ .I $$TEST^RGUTRTN(RGRTN) W "That routine already exists.  Try another name.",!! S RGRTN="" Q
  Q RGRTN
  ; Allows routine template to prompt for input
 GET(RGP,RGD) ;

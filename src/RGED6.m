@@ -1,4 +1,4 @@
-RGED6 ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
+RGED6 ;MSC/IND/DKM - Continuation of RGED;01-Apr-2015 08:59;DKM
  ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 12
  ;;
  ;=================================================================
@@ -46,7 +46,7 @@ IMP2 S RGZ2=RGIMP,RGIMP=RGDIC
 IMP3 S RGMSG2=$$IMPGBL(RGIMP,RGITER)
  Q
  ; Import a MUMPS routine
-IMP4 I '$$TEST^RGUTOS(RGIMP) S RGMSG2=-28 Q
+IMP4 I '$$TEST^RGUTRTN(RGIMP) S RGMSG2=-28 Q
  K ^XTMP(RGPID,"RGED6")
  F RGZ=1:1 D  Q:RGZ1=""
  .S RGZ1=$T(+RGZ^@RGIMP)
