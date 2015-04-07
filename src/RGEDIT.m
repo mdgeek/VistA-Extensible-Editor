@@ -1,4 +1,4 @@
-RGEDIT ;MSC/IND/DKM - M routine editor ;01-Apr-2015 08:59;DKM
+RGEDIT ;MSC/IND/DKM - M routine editor ;05-Apr-2015 08:49;DKM
  ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 12
  ;;
  ;=================================================================
@@ -18,12 +18,12 @@ LOCAL N RGI,RGED,RGY
  K ^TMP("RGEDRTN2",$J)
  Q
 ENTRY(RGS,RGB) ;
- N RGT
+ N RGT,$ET
  S U="^",RGS=$G(RGS),RGB=+$G(RGB),DTIME=$G(DTIME,999999),DT=$$DT^XLFDT
  S RGT=$S(RGS&RGB:"search/browse",RGS:"search",RGB:"browse",1:"")
  S:$L(RGT) RGT=" ("_RGT_" option"_$S(RGS&RGB:"s",1:"")_")"
  D HOME^%ZIS,TITLE^RGUT("Routine Editor"_RGT,$P($T(+2),";",3),"Enter Routine(s) to Edit")
- I $$NEWERR^%ZTER N $ET S $ET=""
+ I '$G(DUZ),'$$ASKDUZ Q
  W !!
  I $D(^TMP("RGEDRTN",$J)),$$ASK^RGUT("Routines exist in edit buffer.  Do you wish to edit these") D DOIT(1) Q
  X ^%ZOSF("RSEL")
@@ -43,6 +43,15 @@ ENTRY(RGS,RGB) ;
  ..K:RGZ ^UTILITY($J,RGR)
  D:$O(^UTILITY($J,$C(1)))'="" DOIT()
  Q
+ ; Prompt for user if undefined
+ASKDUZ() N DUZ0,XUEOFF,XUEON,RSP,Y
+ S:$D(DUZ(0))#2 DUZ0=DUZ(0)
+ S XUEOFF=^%ZOSF("EOFF"),XUEON=^%ZOSF("EON"),DUZ=0
+ F  S Y=0 D ASKDUZ^XUP Q:DUZ!Y  D  Q:RSP'["N"
+ .W !,"Continue without user context? "
+ .S RSP=$$ENTRY^RGUTEDT("N",1,,,"YN^","U")
+ S:$D(DUZ0) DUZ(0)=DUZ0
+ Q $S(DUZ:DUZ,Y:0,1:RSP'[U)
  ; Edit routines named in ^UTILITY($J)
 DOIT(RGKP) ;
  N RGN,RG,RG1,RG2,RG3,RG4,RG5,RG6,RG7,RG8,RGD,RGE,RGH,RGL,RGED,RGR,RGS,RGS1,RGS2,RGQ,RGZ,RGG

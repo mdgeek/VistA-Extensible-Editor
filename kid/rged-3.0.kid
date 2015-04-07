@@ -1,11 +1,11 @@
-KIDS Distribution saved on Apr 01, 2015@17:44:38
+KIDS Distribution saved on Apr 07, 2015@15:23:49
 EXTENSIBLE EDITOR 3.0
 **KIDS**:EXTENSIBLE EDITOR 3.0^
 
 **INSTALL NAME**
 EXTENSIBLE EDITOR 3.0
 "BLD",8504,0)
-EXTENSIBLE EDITOR 3.0^EXTENSIBLE EDITOR^0^3150401^n
+EXTENSIBLE EDITOR 3.0^EXTENSIBLE EDITOR^0^3150407^n
 "BLD",8504,1,0)
 ^^1^1^3011129.213128
 "BLD",8504,1,1,0)
@@ -27,7 +27,7 @@ y^y^f^^n^^y^a^n
 "BLD",8504,4,"B",996.1,996.1)
 
 "BLD",8504,6.3)
-20
+21
 "BLD",8504,"ABPKG")
 n
 "BLD",8504,"INI")
@@ -887,7 +887,7 @@ RGEDCMP^^0^B8524088
 "BLD",8504,"KRN",9.8,"NM",10,0)
 RGED^^0^B13527796
 "BLD",8504,"KRN",9.8,"NM",11,0)
-RGEDIT^^0^B25310205
+RGEDIT^^0^B28151988
 "BLD",8504,"KRN",9.8,"NM",12,0)
 RGEDF^^0^B6236788
 "BLD",8504,"KRN",9.8,"NM",13,0)
@@ -83761,9 +83761,9 @@ RG
 "PKG",223,22,0)
 ^9.49I^1^1
 "PKG",223,22,1,0)
-3.0^3150401^3150202^1
+3.0^3150407^3150202^1
 "PKG",223,22,1,1,0)
-^^1^1^3150401
+^^1^1^3150407
 "PKG",223,22,1,1,1,0)
 Fully extensible, screen-oriented text editor for VistA/RPMS.
 "PKG",223,"DEV")
@@ -83849,7 +83849,7 @@ D XPZ2^XPDIQ
 "RTN","RGED",1,0)
 RGED ;MSC/IND/DKM - Extensible Editor ;20-Jan-2015 13:23;DKM
 "RTN","RGED",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGED",3,0)
  ;;
 "RTN","RGED",4,0)
@@ -83999,7 +83999,7 @@ RESET X ^%ZOSF("EON"),^%ZOSF("TRMOFF")
 "RTN","RGED0",1,0)
 RGED0 ;MSC/IND/DKM - Continuation of RGED;20-Jan-2015 13:23;DKM
 "RTN","RGED0",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGED0",3,0)
  ;;
 "RTN","RGED0",4,0)
@@ -84233,7 +84233,7 @@ ERROR Q:$G(DTOUT)
 "RTN","RGED1",1,0)
 RGED1 ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
 "RTN","RGED1",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGED1",3,0)
  ;;
 "RTN","RGED1",4,0)
@@ -84551,7 +84551,7 @@ BMFND I $G(RGBMR) D MOVETO^RGED2(RGBMR,RGBMC) Q
 "RTN","RGED2",1,0)
 RGED2 ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
 "RTN","RGED2",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGED2",3,0)
  ;;
 "RTN","RGED2",4,0)
@@ -84923,7 +84923,7 @@ PRMPT(RGPRMPT,RGLEN,RGFLG,RGVALID,RGDATA) ;
 "RTN","RGED3",1,0)
 RGED3 ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
 "RTN","RGED3",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGED3",3,0)
  ;;
 "RTN","RGED3",4,0)
@@ -85095,7 +85095,7 @@ MS1 F RGCNT=0:1 S RGMACRO=$O(^RGED("M",RGCF,DUZ,RGMACRO)) Q:RGMACRO=""  D
 "RTN","RGED4",1,0)
 RGED4 ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
 "RTN","RGED4",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGED4",3,0)
  ;;
 "RTN","RGED4",4,0)
@@ -85255,7 +85255,7 @@ LKP(RGDIC,RGOPT,RGPRMPT,RGEDRF,RGDATA,RGSCN,RGMUL,RGED,RGY,RGSID,RGTRP,RGHLP) ;
 "RTN","RGED5",1,0)
 RGED5 ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
 "RTN","RGED5",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGED5",3,0)
  ;;
 "RTN","RGED5",4,0)
@@ -85435,7 +85435,7 @@ BDEL(RGNEW) ;
 "RTN","RGED6",1,0)
 RGED6 ;MSC/IND/DKM - Continuation of RGED;01-Apr-2015 08:59;DKM
 "RTN","RGED6",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGED6",3,0)
  ;;
 "RTN","RGED6",4,0)
@@ -85673,7 +85673,7 @@ IMPTMP(RGZ) ;
 "RTN","RGEDBRS",1,0)
 RGEDBRS ;MSC/IND/DKM - Text file browser;04-May-2006 08:19;DKM
 "RTN","RGEDBRS",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDBRS",3,0)
  ;;
 "RTN","RGEDBRS",4,0)
@@ -85785,7 +85785,7 @@ SETPAR(RGNAME,RGVAL) ;
 "RTN","RGEDCMP",1,0)
 RGEDCMP ;MSC/IND/DKM - Initialize key map table ;04-May-2006 08:19;DKM
 "RTN","RGEDCMP",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDCMP",3,0)
  ;;
 "RTN","RGEDCMP",4,0)
@@ -85927,7 +85927,7 @@ ERROR W ?3,"Compilation aborted: "_$$EC^%ZOSV,!
 "RTN","RGEDF",1,0)
 RGEDF ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
 "RTN","RGEDF",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDF",3,0)
  ;;
 "RTN","RGEDF",4,0)
@@ -86039,7 +86039,7 @@ REPLACE(RGITER) ;
 "RTN","RGEDFIL",1,0)
 RGEDFIL ;MSC/IND/DKM - Text file editor ;20-Jan-2015 13:23;DKM
 "RTN","RGEDFIL",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDFIL",3,0)
  ;;
 "RTN","RGEDFIL",4,0)
@@ -86123,7 +86123,7 @@ ERROR U IO
 "RTN","RGEDH",1,0)
 RGEDH ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
 "RTN","RGEDH",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDH",3,0)
  ;;
 "RTN","RGEDH",4,0)
@@ -86331,7 +86331,7 @@ PARSE() N RGZ,RGZ1,RGZ2,RGZ3
 "RTN","RGEDINIT",1,0)
 RGEDINIT ;MSC/IND/DKM - Extensible Editor Inits;04-May-2006 08:19;DKM
 "RTN","RGEDINIT",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDINIT",3,0)
  ;;
 "RTN","RGEDINIT",4,0)
@@ -86539,11 +86539,11 @@ DEVICE ;; Setups for browser device
 "RTN","RGEDINIT",105,0)
  ;;
 "RTN","RGEDIT")
-0^11^B25310205
+0^11^B28151988
 "RTN","RGEDIT",1,0)
-RGEDIT ;MSC/IND/DKM - M routine editor ;01-Apr-2015 08:59;DKM
+RGEDIT ;MSC/IND/DKM - M routine editor ;05-Apr-2015 08:49;DKM
 "RTN","RGEDIT",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDIT",3,0)
  ;;
 "RTN","RGEDIT",4,0)
@@ -86581,7 +86581,7 @@ LOCAL N RGI,RGED,RGY
 "RTN","RGEDIT",20,0)
 ENTRY(RGS,RGB) ;
 "RTN","RGEDIT",21,0)
- N RGT
+ N RGT,$ET
 "RTN","RGEDIT",22,0)
  S U="^",RGS=$G(RGS),RGB=+$G(RGB),DTIME=$G(DTIME,999999),DT=$$DT^XLFDT
 "RTN","RGEDIT",23,0)
@@ -86591,7 +86591,7 @@ ENTRY(RGS,RGB) ;
 "RTN","RGEDIT",25,0)
  D HOME^%ZIS,TITLE^RGUT("Routine Editor"_RGT,$P($T(+2),";",3),"Enter Routine(s) to Edit")
 "RTN","RGEDIT",26,0)
- I $$NEWERR^%ZTER N $ET S $ET=""
+ I '$G(DUZ),'$$ASKDUZ Q
 "RTN","RGEDIT",27,0)
  W !!
 "RTN","RGEDIT",28,0)
@@ -86631,167 +86631,185 @@ ENTRY(RGS,RGB) ;
 "RTN","RGEDIT",45,0)
  Q
 "RTN","RGEDIT",46,0)
- ; Edit routines named in ^UTILITY($J)
+ ; Prompt for user if undefined
 "RTN","RGEDIT",47,0)
-DOIT(RGKP) ;
+ASKDUZ() N DUZ0,XUEOFF,XUEON,RSP,Y
 "RTN","RGEDIT",48,0)
- N RGN,RG,RG1,RG2,RG3,RG4,RG5,RG6,RG7,RG8,RGD,RGE,RGH,RGL,RGED,RGR,RGS,RGS1,RGS2,RGQ,RGZ,RGG
+ S:$D(DUZ(0))#2 DUZ0=DUZ(0)
 "RTN","RGEDIT",49,0)
- S U="^",RGN=0,RG=$C(1),RG3=0,RGQ=0,RGKP=$G(RGKP)
+ S XUEOFF=^%ZOSF("EOFF"),XUEON=^%ZOSF("EON"),DUZ=0
 "RTN","RGEDIT",50,0)
- S:'$G(DUZ) DUZ=0
+ F  S Y=0 D ASKDUZ^XUP Q:DUZ!Y  D  Q:RSP'["N"
 "RTN","RGEDIT",51,0)
- G:RGKP EDIT
+ .W !,"Continue without user context? "
 "RTN","RGEDIT",52,0)
- K ^TMP("RGEDRTN",$J)
+ .S RSP=$$ENTRY^RGUTEDT("N",1,,,"YN^","U")
 "RTN","RGEDIT",53,0)
- F  S RG=$O(^UTILITY($J,RG)) Q:RG=""!RGQ  D
+ S:$D(DUZ0) DUZ(0)=DUZ0
 "RTN","RGEDIT",54,0)
- .S RG8=$T(+1^@RG),RG6=$P(RG8,";",2)="%ROUTINE TEMPLATE%",RG8=$P(RG8,";",3),RGZ=$S(RG6:$$NEW(RG),1:RG)
+ Q $S(DUZ:DUZ,Y:0,1:RSP'[U)
 "RTN","RGEDIT",55,0)
- .Q:RGQ
+ ; Edit routines named in ^UTILITY($J)
 "RTN","RGEDIT",56,0)
- .S:RGZ="@" RGZ=RG,RG6=0
+DOIT(RGKP) ;
 "RTN","RGEDIT",57,0)
- .L +^RGED("RTN",RGZ):0
+ N RGN,RG,RG1,RG2,RG3,RG4,RG5,RG6,RG7,RG8,RGD,RGE,RGH,RGL,RGED,RGR,RGS,RGS1,RGS2,RGQ,RGZ,RGG
 "RTN","RGEDIT",58,0)
- .E  S RGZ=$$GET(RGZ_" is being edited by another user.  Press RETURN or ENTER to continue") Q
+ S U="^",RGN=0,RG=$C(1),RG3=0,RGQ=0,RGKP=$G(RGKP)
 "RTN","RGEDIT",59,0)
- .S ^RGED("RTN",RGZ)=$J,RGN=RGN+1,RGG=RGZ,RG3=RG3+1,^TMP("RGEDRTN",$J,RG3,0)="*"_RGZ
+ S:'$G(DUZ) DUZ=0
 "RTN","RGEDIT",60,0)
- .F RG1=RG6+1:1 S RG2=$T(+RG1^@RG) Q:RG2=""  D
+ G:RGKP EDIT
 "RTN","RGEDIT",61,0)
- ..S:RG6&$L(RG8) RG2=$$MSG^RGUT(RG2,RG8)
+ K ^TMP("RGEDRTN",$J)
 "RTN","RGEDIT",62,0)
- ..S RG3=RG3+1,RG4=$P(RG2," "),RG2=$P(RG2," ",2,999),^TMP("RGEDRTN",$J,RG3,0)=RG4_$E("         ",$L(RG4)+1,$S($L(RG4)+$L(RG2)>245:0,1:8))_" "_RG2
+ F  S RG=$O(^UTILITY($J,RG)) Q:RG=""!RGQ  D
 "RTN","RGEDIT",63,0)
- G:RGQ!'RG3 DONE
+ .S RG8=$T(+1^@RG),RG6=$P(RG8,";",2)="%ROUTINE TEMPLATE%",RG8=$P(RG8,";",3),RGZ=$S(RG6:$$NEW(RG),1:RG)
 "RTN","RGEDIT",64,0)
- S ^TMP("RGEDRTN2",$J)=$S(RGN=1:RGG,1:RGN_" routines"),^TMP("RGEDRTN",$J,0)=U_U_RG3_U_RG3
+ .Q:RGQ
 "RTN","RGEDIT",65,0)
-EDIT D ENTRY^RGED($NA(^TMP("RGEDRTN",$J)),"Routine Editor  Version |RGVER|",^TMP("RGEDRTN2",$J),$S($G(RGB):"BROWSE",1:"PROG"))
+ .S:RGZ="@" RGZ=RG,RG6=0
 "RTN","RGEDIT",66,0)
- G:'$P(^TMP("RGEDRTN",$J,0),U,5) DONE
+ .L +^RGED("RTN",RGZ):0
 "RTN","RGEDIT",67,0)
- Q:RGKP<0
+ .E  S RGZ=$$GET(RGZ_" is being edited by another user.  Press RETURN or ENTER to continue") Q
 "RTN","RGEDIT",68,0)
- K ^TMP("RGEDRTN3",$J)
+ .S ^RGED("RTN",RGZ)=$J,RGN=RGN+1,RGG=RGZ,RG3=RG3+1,^TMP("RGEDRTN",$J,RG3,0)="*"_RGZ
 "RTN","RGEDIT",69,0)
- S RGH=$P($G(^VA(200,DUZ,0)),U,2),RGS=1,@$$TRAP^RGUTOS("ERR^RGEDIT"),$ZE=""
+ .F RG1=RG6+1:1 S RG2=$T(+RG1^@RG) Q:RG2=""  D
 "RTN","RGEDIT",70,0)
- R:RGH="" !,"Initials: ",RGH:DTIME,!
+ ..S:RG6&$L(RG8) RG2=$$MSG^RGUT(RG2,RG8)
 "RTN","RGEDIT",71,0)
- S RGH=$$ENTRY^RGUTDT($H)_";"_$E($TR(RGH,"^;"),1,3)
+ ..S RG3=RG3+1,RG4=$P(RG2," "),RG2=$P(RG2," ",2,999),^TMP("RGEDRTN",$J,RG3,0)=RG4_$E("         ",$L(RG4)+1,$S($L(RG4)+$L(RG2)>245:0,1:8))_" "_RG2
 "RTN","RGEDIT",72,0)
- F RG1=.5:0 S RG1=+$O(^TMP("RGEDRTN",$J,RG1)) Q:'RG1  S RGL=$G(^(RG1,0)) D SV0:$E(RGL)="*",@("SV"_RGS)
+ G:RGQ!'RG3 DONE
 "RTN","RGEDIT",73,0)
- D SV0
+ S ^TMP("RGEDRTN2",$J)=$S(RGN=1:RGG,1:RGN_" routines"),^TMP("RGEDRTN",$J,0)=U_U_RG3_U_RG3
 "RTN","RGEDIT",74,0)
-DONE K ^UTILITY($J),^TMP("RGEDRTN",$J),^TMP("RGEDRTN2",$J),^TMP("RGEDRTN3",$J)
+EDIT D ENTRY^RGED($NA(^TMP("RGEDRTN",$J)),"Routine Editor  Version |RGVER|",^TMP("RGEDRTN2",$J),$S($G(RGB):"BROWSE",1:"PROG"))
 "RTN","RGEDIT",75,0)
- S RGZ=""
+ G:'$P(^TMP("RGEDRTN",$J,0),U,5) DONE
 "RTN","RGEDIT",76,0)
- F  S RGZ=$O(^RGED("RTN",RGZ)) Q:RGZ=""  I ^(RGZ)=$J K ^(RGZ) L -^RGED("RTN",RGZ)
+ Q:RGKP<0
 "RTN","RGEDIT",77,0)
- X ^%ZOSF("TYPE-AHEAD")
-"RTN","RGEDIT",78,0)
- W !!
-"RTN","RGEDIT",79,0)
- Q
-"RTN","RGEDIT",80,0)
-ERR W $$EC^%ZOSV,!
-"RTN","RGEDIT",81,0)
- G DONE
-"RTN","RGEDIT",82,0)
-SV0 ; Save current routine
-"RTN","RGEDIT",83,0)
- D:$D(^TMP("RGEDRTN3",$J,"R")) SAVE^RGUTRTN(RGR,$NA(^("R")))
-"RTN","RGEDIT",84,0)
  K ^TMP("RGEDRTN3",$J)
+"RTN","RGEDIT",78,0)
+ S RGH=$P($G(^VA(200,DUZ,0)),U,2),RGS=1,@$$TRAP^RGUTOS("ERR^RGEDIT"),$ZE=""
+"RTN","RGEDIT",79,0)
+ R:RGH="" !,"Initials: ",RGH:DTIME,!
+"RTN","RGEDIT",80,0)
+ S RGH=$$ENTRY^RGUTDT($H)_";"_$E($TR(RGH,"^;"),1,3)
+"RTN","RGEDIT",81,0)
+ F RG1=.5:0 S RG1=+$O(^TMP("RGEDRTN",$J,RG1)) Q:'RG1  S RGL=$G(^(RG1,0)) D SV0:$E(RGL)="*",@("SV"_RGS)
+"RTN","RGEDIT",82,0)
+ D SV0
+"RTN","RGEDIT",83,0)
+DONE K ^UTILITY($J),^TMP("RGEDRTN",$J),^TMP("RGEDRTN2",$J),^TMP("RGEDRTN3",$J)
+"RTN","RGEDIT",84,0)
+ S RGZ=""
 "RTN","RGEDIT",85,0)
- S RGS=1
+ F  S RGZ=$O(^RGED("RTN",RGZ)) Q:RGZ=""  I ^(RGZ)=$J K ^(RGZ) L -^RGED("RTN",RGZ)
 "RTN","RGEDIT",86,0)
- Q
+ X ^%ZOSF("TYPE-AHEAD")
 "RTN","RGEDIT",87,0)
-SV1 ; New routine
+ W !!
 "RTN","RGEDIT",88,0)
- S:$E(RGL)="*" RGR=$E($TR(RGL," "),2,999),RGS=2
+ Q
 "RTN","RGEDIT",89,0)
- W !,RGR_"..."
+ERR W $$EC^%ZOSV,!
 "RTN","RGEDIT",90,0)
- Q
+ G DONE
 "RTN","RGEDIT",91,0)
-SV2 ; Possible header
+SV0 ; Save current routine
 "RTN","RGEDIT",92,0)
- S RGS=3
+ D:$D(^TMP("RGEDRTN3",$J,"R")) SAVE^RGUTRTN(RGR,$NA(^("R")))
 "RTN","RGEDIT",93,0)
- I RGL'["%ROUTINE TEMPLATE%",RGL[";" S $P(RGL,";",3,4)=RGH
+ K ^TMP("RGEDRTN3",$J)
 "RTN","RGEDIT",94,0)
- ; Routine line
+ S RGS=1
 "RTN","RGEDIT",95,0)
-SV3 N LBL,CMD,X,Y
-"RTN","RGEDIT",96,0)
- S LBL=$P(RGL," "),CMD=$$TRIM^RGUT($P(RGL," ",2,999))
-"RTN","RGEDIT",97,0)
- I $L(LBL) D
-"RTN","RGEDIT",98,0)
- .S (X,Y)=$P(LBL,"(")
-"RTN","RGEDIT",99,0)
- .F  Q:'$D(^TMP("RGEDRTN3",$J,"L",X))  S X=X_"_"
-"RTN","RGEDIT",100,0)
- .S ^TMP("RGEDRTN3",$J,"L",X)=""
-"RTN","RGEDIT",101,0)
- .I X'=Y D
-"RTN","RGEDIT",102,0)
- ..W !?5,"Replacing duplicate label ",Y," with ",X
-"RTN","RGEDIT",103,0)
- ..S $P(LBL,"(")=X
-"RTN","RGEDIT",104,0)
- S:$L(LBL)!$L(CMD) X=1+$O(^TMP("RGEDRTN3",$J,"R",""),-1),^(X,0)=LBL_" "_CMD
-"RTN","RGEDIT",105,0)
  Q
+"RTN","RGEDIT",96,0)
+SV1 ; New routine
+"RTN","RGEDIT",97,0)
+ S:$E(RGL)="*" RGR=$E($TR(RGL," "),2,999),RGS=2
+"RTN","RGEDIT",98,0)
+ W !,RGR_"..."
+"RTN","RGEDIT",99,0)
+ Q
+"RTN","RGEDIT",100,0)
+SV2 ; Possible header
+"RTN","RGEDIT",101,0)
+ S RGS=3
+"RTN","RGEDIT",102,0)
+ I RGL'["%ROUTINE TEMPLATE%",RGL[";" S $P(RGL,";",3,4)=RGH
+"RTN","RGEDIT",103,0)
+ ; Routine line
+"RTN","RGEDIT",104,0)
+SV3 N LBL,CMD,X,Y
+"RTN","RGEDIT",105,0)
+ S LBL=$P(RGL," "),CMD=$$TRIM^RGUT($P(RGL," ",2,999))
 "RTN","RGEDIT",106,0)
- ; Process routine templates
+ I $L(LBL) D
 "RTN","RGEDIT",107,0)
-NEW(RGRTN) ;
+ .S (X,Y)=$P(LBL,"(")
 "RTN","RGEDIT",108,0)
- W RGRTN_" is a routine template.",!!
+ .F  Q:'$D(^TMP("RGEDRTN3",$J,"L",X))  S X=X_"_"
 "RTN","RGEDIT",109,0)
- F  D  Q:RGRTN'=""
+ .S ^TMP("RGEDRTN3",$J,"L",X)=""
 "RTN","RGEDIT",110,0)
- .R "New routine name: ",RGRTN:DTIME,!
+ .I X'=Y D
 "RTN","RGEDIT",111,0)
- .E  S RGRTN=U
+ ..W !?5,"Replacing duplicate label ",Y," with ",X
 "RTN","RGEDIT",112,0)
- .I RGRTN=U S RGQ=1 Q
+ ..S $P(LBL,"(")=X
 "RTN","RGEDIT",113,0)
- .Q:RGRTN="@"
+ S:$L(LBL)!$L(CMD) X=1+$O(^TMP("RGEDRTN3",$J,"R",""),-1),^(X,0)=LBL_" "_CMD
 "RTN","RGEDIT",114,0)
- .I RGRTN'?1A.7AN W "That is not a valid name.  Enter ^ to abort, @ to edit the template.",!! S RGRTN="" Q
+ Q
 "RTN","RGEDIT",115,0)
- .I $$TEST^RGUTRTN(RGRTN) W "That routine already exists.  Try another name.",!! S RGRTN="" Q
+ ; Process routine templates
 "RTN","RGEDIT",116,0)
- Q RGRTN
+NEW(RGRTN) ;
 "RTN","RGEDIT",117,0)
- ; Allows routine template to prompt for input
+ W RGRTN_" is a routine template.",!!
 "RTN","RGEDIT",118,0)
-GET(RGP,RGD) ;
+ F  D  Q:RGRTN'=""
 "RTN","RGEDIT",119,0)
- W RGP_$S($G(RGD)'="":"  /"_RGD_"/",1:"")_" : "
+ .R "New routine name: ",RGRTN:DTIME,!
 "RTN","RGEDIT",120,0)
- R RGP:DTIME,!
+ .E  S RGRTN=U
 "RTN","RGEDIT",121,0)
- E  S RGP=U
+ .I RGRTN=U S RGQ=1 Q
 "RTN","RGEDIT",122,0)
- S:RGP=U RGQ=1
+ .Q:RGRTN="@"
 "RTN","RGEDIT",123,0)
+ .I RGRTN'?1A.7AN W "That is not a valid name.  Enter ^ to abort, @ to edit the template.",!! S RGRTN="" Q
+"RTN","RGEDIT",124,0)
+ .I $$TEST^RGUTRTN(RGRTN) W "That routine already exists.  Try another name.",!! S RGRTN="" Q
+"RTN","RGEDIT",125,0)
+ Q RGRTN
+"RTN","RGEDIT",126,0)
+ ; Allows routine template to prompt for input
+"RTN","RGEDIT",127,0)
+GET(RGP,RGD) ;
+"RTN","RGEDIT",128,0)
+ W RGP_$S($G(RGD)'="":"  /"_RGD_"/",1:"")_" : "
+"RTN","RGEDIT",129,0)
+ R RGP:DTIME,!
+"RTN","RGEDIT",130,0)
+ E  S RGP=U
+"RTN","RGEDIT",131,0)
+ S:RGP=U RGQ=1
+"RTN","RGEDIT",132,0)
  Q $S(RGP="":$G(RGD),1:RGP)
 "RTN","RGEDKD")
 0^16^B1852610
 "RTN","RGEDKD",1,0)
 RGEDKD ;MSC/IND/DKM - Create keystroke macros ;20-Jan-2015 13:23;DKM
 "RTN","RGEDKD",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDKD",3,0)
  ;;
 "RTN","RGEDKD",4,0)
@@ -86859,7 +86877,7 @@ FND S ^RGEDCFG(RGCF,3,"B",X,RGZ)=""
 "RTN","RGEDS",1,0)
 RGEDS ;MSC/IND/DKM - Continuation of RGED;04-May-2006 08:19;DKM
 "RTN","RGEDS",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDS",3,0)
  ;;
 "RTN","RGEDS",4,0)
@@ -87085,7 +87103,7 @@ RV1 S $X=RGZX,$Y=RGZY
 "RTN","RGEDTMPL",1,0)
  ;%ROUTINE TEMPLATE%;z
 "RTN","RGEDTMPL",2,0)
-zRGZz ;z$P($$SITE^VASITE,U,3)z/z$$GET^RGEDIT("Initials",$P($G(^VA(200,+$G(DUZ),0)),U,2))z - z$$GET^RGEDIT("Brief description")z ; z$$ENTRY^RGUTDT($H)z;;;;Build 20
+zRGZz ;z$P($$SITE^VASITE,U,3)z/z$$GET^RGEDIT("Initials",$P($G(^VA(200,+$G(DUZ),0)),U,2))z - z$$GET^RGEDIT("Brief description")z ; z$$ENTRY^RGUTDT($H)z;;;;Build 21
 "RTN","RGEDTMPL",3,0)
  ;;z$$GET^RGEDIT("Version","1.0")z;z$$GET^RGEDIT("Package")z;;z$$ENTRY^RGUTDT($H)z
 "RTN","RGEDTMPL",4,0)
@@ -87095,7 +87113,7 @@ zRGZz ;z$P($$SITE^VASITE,U,3)z/z$$GET^RGEDIT("Initials",$P($G(^VA(200,+$G(DUZ),0
 "RTN","RGEDX1",1,0)
 RGEDX1 ;MSC/IND/DKM - Maintenance utilities ;04-May-2006 08:19;DKM
 "RTN","RGEDX1",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDX1",3,0)
  ;;
 "RTN","RGEDX1",4,0)
@@ -87119,7 +87137,7 @@ USRPRG N RGZ,RGED,RGY
 "RTN","RGEDX2",1,0)
 RGEDX2 ;MSC/IND/DKM - Programmer extensions ;04-May-2006 08:19;DKM
 "RTN","RGEDX2",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDX2",3,0)
  ;;
 "RTN","RGEDX2",4,0)
@@ -87311,7 +87329,7 @@ SYNTAX(RGL1,RGL2) ;
 "RTN","RGEDX3",1,0)
 RGEDX3 ;MSC/IND/DKM - Spell checking extension ;04-May-2006 08:19;DKM
 "RTN","RGEDX3",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDX3",3,0)
  ;;
 "RTN","RGEDX3",4,0)
@@ -87451,7 +87469,7 @@ LKP(X) Q:X="" 1
 "RTN","RGEDX4",1,0)
 RGEDX4 ;MSC/IND/DKM - Help frame editor ;20-Jan-2015 13:23;DKM
 "RTN","RGEDX4",2,0)
- ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 20
+ ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 21
 "RTN","RGEDX4",3,0)
  ;;
 "RTN","RGEDX4",4,0)
