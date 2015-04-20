@@ -1,4 +1,4 @@
-RGEDCMP ;MSC/IND/DKM - Initialize key map table ;04-May-2006 08:19;DKM
+RGEDCMP ;MSC/IND/DKM - Initialize key map table ;20-Apr-2015 10:19;DKM
  ;;3.0;EXTENSIBLE EDITOR;;Jan 23, 2015;Build 12
  ;;
  ;=================================================================
@@ -6,7 +6,7 @@ RGEDCMP ;MSC/IND/DKM - Initialize key map table ;04-May-2006 08:19;DKM
  N RGED,RGCF
 REDO D TITLE^RGUT("Compile Editor Configuration",$P($T(+2),";",3))
  S RGED("ALL")="Enter ALL to compile all configurations."
- S RGCF=$$ENTRY^RGUTLKP("^RGED1","A1UP","Enter configuration to compile: ","","","","",0,3,"$G(^RGEDCFG(%S,.25))","RGED")
+ S RGCF=$$ENTRY^RGUTLKP(996,"A1UP","Enter configuration to compile: ","","","","",0,3,"$G(^RGEDCFG(%S,.25))","RGED")
  W !!
  Q:(RGCF<1)&(RGCF'="ALL")
  D CMP(RGCF)
